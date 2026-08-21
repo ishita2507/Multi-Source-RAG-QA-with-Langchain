@@ -1,0 +1,21 @@
+
+# Our Approach
+We'll build this in small milestones:
+1. **Set up the project**
+   - Create a folder in your local
+   - Open VS Code and open that project folder
+   - enter uv-init (it initializes the project)
+2. **Create a Requirements File** 
+  - Create a requirements.txt so you don't have to download all packages separately
+  - Add all the libraries without comma
+  -  (python-dotenv
+  -  langchain
+  -  langchain-community
+  -  langchain-openai
+  -  openai
+  -  pypdf
+  -  chromadb
+  -  beautifulsoup4)
+4. **Load your API Key**
+  - create a new file .env
+  - Enter your API key in double quotes and name it OPENAI_API_KEY or GEMINI_API_KEY (don't give any other names)
