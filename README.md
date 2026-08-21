@@ -3,6 +3,7 @@ Goal: To build an AI-powered analytics assistant that allows business users to a
 In simple terms, built an assistant/system that answer any user question by searching across company pdf, policy documents, weblinks and structured data and provides answers along with source citations. 
 
 <img width="300" height="350" alt="image" src="https://github.com/user-attachments/assets/82acadbe-df36-4c6c-a254-2e436fac455d" />
+<br>
 <img width="300" height="100" alt="image" src="https://github.com/user-attachments/assets/fc166a43-0950-4d29-be9f-9a88fc0d187e" />
 
 
