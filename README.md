@@ -31,12 +31,10 @@ Retrieval: Langchain
 Vector Database: Chroma
 UI: Stremalit
 
-# Our Approach
-We'll build this in small milestones:
-1. Set up the project
-2. Create our own realistic datasets
-3. Explore the structured data with Python/Pandas/SQL
-4. Create our business documents
+   
+4. Create our own realistic datasets
+5. Explore the structured data with Python/Pandas/SQL
+6. Create our business documents
 Build the basic PDF/document RAG
 Understand embeddings deeply
 Build the Chroma vector store
