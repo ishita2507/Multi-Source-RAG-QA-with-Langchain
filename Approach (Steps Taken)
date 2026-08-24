@@ -19,3 +19,38 @@ We'll build this in small milestones:
 4. **Load your API Key**
   - create a new file .env
   - Enter your API key in double quotes and name it OPENAI_API_KEY or GEMINI_API_KEY (don't give any other names)
+5. Data (coming from pdf, data tables (structured) and web links) 
+   5.1 Structured Data: Create dummy tables for customers, products, orders, and returns
+   Once done, move them into a database sqlite3
+   in order to move, you need to form a connect that is create a database name in data folder
+   connection = sqlite3.connect("data/novaretail.db")
+   ## print("connection done")
+   from create_data import customers, products, orders, returns
+   when moving our pandas df to database we need to convert them to sql tables 
+   since later, python would run those sql tables in sqlite3
+   customers.to_sql( 
+     "customers" -- keep the name same, 
+    connection,
+    if_exists = "replace", 
+   index = False) 
+   ###what it is exactly doing is moving from python memory to novaretail database
+   whatever is in sqlite database is directly fed to LLM
+   we let the LLM create the appropriate SQL based on the current question.
+   
+6. Unstuctured data (pdf files and web based links) 
+   load all pdfs data into a list and this is done using langchain_community.document_loaders import textloader
+   list = []
+   files = ["", "",""]
+   for file in files: 
+      loader = TextLoader(file)
+      documents = loader.load()   ###constant
+      list.extend(documents)
+
+   similarly for web based links
+   web_links = ["","",""]
+   for link in weblinks: 
+       loader = WebBaseLoader(link) 
+       documents = loader.load()     ###constant
+       list.extend(documents)
+
+ 7. once we have all the documents, we need to convert them into chunks
